@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Webpage</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin: 0;
+      padding: 1em;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+
+    /* Styling with ID, Class and Pseudo-classes */
+    #main-content {
+      padding: 1em;
+      background-color: #f4f4f4;
+    }
+
+    .content-section {
+      margin-bottom: 2em;
+    }
+
+    .cta-button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #45a049;
+    }
+
+    /* Simple Animation using keyframes */
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .animated-button {
+      background-color: #ff6347;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      animation: bounce 1s infinite;
+    }
+
+    /* Flexbox Layout */
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100vh;
+    }
+
+    .flex-footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+
+    /* Grid Layout */
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr auto;
+      min-height: 100vh;
+    }
+
+    .grid-header, .grid-footer {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+
+    .grid-content {
+      padding: 2em;
+      background-color: #f9f9f9;
+    }
+
+    /* Responsive Design */
+    @media (min-width: 768px) {
+      /* Tablet view */
+      .grid-container {
+        grid-template-columns: 1fr 3fr;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      /* Desktop view */
+      .flex-container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .flex-content {
+        width: 70%;
+        padding: 1em;
+      }
+
+      .flex-sidebar {
+        width: 25%;
+        padding: 1em;
+        background-color: #f9f9f9;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Flexbox Layout -->
+  <div class="flex-container">
+    <header>
+      <h1>Responsive Flexbox Layout</h1>
+    </header>
+
+    <div id="main-content" class="flex-content content-section">
+      <h2>Main Content Section</h2>
+      <p>This is the main content area. Resize the browser window to see the layout change with Flexbox.</p>
+      <button class="cta-button">Call to Action</button>
+    </div>
+
+    <div class="flex-footer">
+      <p>Footer Content with Flexbox</p>
+    </div>
+  </div>
+
+  <hr />
+
+  <!-- Grid Layout -->
+  <div class="grid-container">
+    <header class="grid-header">
+      <h1>Responsive Grid Layout</h1>
+    </header>
+
+    <div class="grid-content">
+      <h2>Main Content Section</h2>
+      <p>This is the main content area. Resize the browser window to see the layout change with CSS Grid.</p>
+      <button class="animated-button">Animated Button</button>
+    </div>
+
+    <footer class="grid-footer">
+      <p>Footer Content with Grid</p>
+    </footer>
+  </div>
+
+</body>
+</html>
